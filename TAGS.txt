@@ -1,0 +1,43 @@
+Este breve archivo de texto explica como utilizar tags en Git y/o GitHub especialmente enfocado en su uso en el proyecto de ViSyPro
+
+Para que utilizar tags:
+  - Las tags son simples puntos específicos en la historia de nuestro proyecto y se usan para marcar alguna versión del mismo.
+
+------------------
+| Tipos de Tags: |
+------------------
+
+  Tags Anotadas:
+  --------------
+  Las tags anotadas son almacenadas como objetos completos dentro de la base de Git y contienen más información.
+
+  Ejemplo:
+      $ git tag -a v1.0 -m "Mensaje"
+
+  Tags Ligeras:
+  --------------
+  Las tags ligeras son otra forma de crear tags, más simple y con poca información.
+
+  Ejemplo:
+      $ git tag v1.0
+
+-----------------------------
+| Tags a commits anteriores |
+-----------------------------
+
+Los tags en commits anteriores se pueden utilizar para especificar un tag a un commit que no fue especificado en su tiempo.
+
+Para hacrlo solamente hacer falta agregar el codigo SHA que se asigna en cada commit
+
+Ejemplo:
+  $ git tag -a v1.0 -m "Mensaje" 823a4443a91964e77ea4e15a4c0f85590711cd2e
+
+
+-------------------
+|Compartiendo Tags|
+-------------------
+
+Al momento de crear un tag este no se sube automáticamente al repositorio principal de git, ni tampooc se sube de forma automática cuando se hace el push, para hacerlo hay que subirlo de forma explícita
+
+Ejemplo:
+  $ git push origin v1.0
