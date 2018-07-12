@@ -25,19 +25,24 @@ Para que utilizar tags:
 | Tags a commits anteriores |
 -----------------------------
 
-Los tags en commits anteriores se pueden utilizar para especificar un tag a un commit que no fue especificado en su tiempo.
+  Los tags en commits anteriores se pueden utilizar para especificar un tag a un commit que no fue especificado en su tiempo.
 
-Para hacrlo solamente hacer falta agregar el codigo SHA que se asigna en cada commit
+  Para hacrlo solamente hacer falta agregar el codigo SHA que se asigna en cada commit
 
-Ejemplo:
-  $ git tag -a v1.0 -m "Mensaje" 823a4443a91964e77ea4e15a4c0f85590711cd2e
-
+  Ejemplo:
+    $ git tag -a v1.0 -m "Mensaje" 823a4443a91964e77ea4e15a4c0f85590711cd2e
 
 -------------------
 |Compartiendo Tags|
 -------------------
 
-Al momento de crear un tag este no se sube automáticamente al repositorio principal de git, ni tampooc se sube de forma automática cuando se hace el push, para hacerlo hay que subirlo de forma explícita
+  Al momento de crear un tag este no se sube automáticamente al repositorio principal de git, ni tampooc se sube de forma automática cuando se hace el push, para hacerlo hay que subirlo de forma explícita
 
-Ejemplo:
-  $ git push origin v1.0
+  Ejemplo:
+    $ git push origin v1.0
+
+
+  Para subir todas las tags existe un comando que se demustra en el siguiente ejemplo
+
+  Ejemplo:
+   $ git push origin --tags
